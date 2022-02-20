@@ -86,54 +86,32 @@ if($res0)
         
         
         <link rel="stylesheet" type="text/css" href="styles.css"></link> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
-    <body class="pnr">
-    <header>
-			<img src="images/bookmyflight.svg" alt="logo" class = "logo" height="40%">
-			<nav class="navbar navbar-custom">
-				<div class="container-fluid">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li> 
-						<li><a href="login_page.php">Book</a></li>
-						<li><a href="pnrall.php">Check PNR</a></li>
-						<li><a href="login_page.php">Login</a></li>
-						<li><a href="new_user.php">Sign Up</a></li> 
-						<li><a href="index.html#contact">Contact Us</a></li>
-						<li><a href="about.html">About Us</a></li> 
-					</ul>     
-				</div>              
-			</nav>
-		</header>
-        <div class="pnrbg">
-        <form id="index" action="pnrall.php" method="post">
-            
-            <div class="container-fluid">    
-                <div class="row">
-                  <div class="col-sm-12">
-                        
-                  </div>
-                 </div>    
-             
-        
-            
-            
-                <div  id="divtop">
-<center>
-                    
-                        <br> <br><br>
-                            <div id="dmain"  > 
-                               <center><img src="images/bookmyflight.svg" width="50%" height="70%" class="pnr_logo"></center>
-                                    <input type="text" id="u_id" name="pnr" class="form-control" style="width:500px; margin-left: 66px; ;margin-top: -10%; height: 30px;" placeholder="Enter Your PNR Number"><br>
-                                   
-                                    <input type="submit" id="u_sub" name="u_sub" value="Check" class="toggle btn btn-primary" style="width:100px; margin-left: 70px; margin-top: -5%;"><br>
-                                   
-                             </div>
-                     </div>
-                    </div>
-               </div>
-            </div>  
-            </div>
-        </form> 
+    <body class="pnr allpagebg">
+        <header>
+            <a href="index.html">
+                <img src="images/bookmyflight.svg" alt="logo" class="logo" height="40%">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="login_page.php">Book</a></li>
+                    <li><a href="pnrall.php">Check PNR</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                    <li><a href="login_page.php">Login</a></li>
+                    <li><a href="new_user.php">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+		<div class="formContainer">
+            <form id="index" action="pnrall.php" method="post">
+                <h1>Check PNR</h1>
+                <input type="text" class="input" id="u_id" name="pnr" class="form-control"  placeholder="Enter Your PNR Number" style="padding:1em; background-color:#E8F0FE;"><br>
+                <input type="submit" id="u_sub" name="u_sub" value="Check" class="toggle btn btn-primary"  style="margin-top:1em"><br>        
+            </form> 
         </div> 
-       </body>
+    </body>
 </html>

@@ -6,53 +6,41 @@
 		<title>
 			Account Login
 		</title>
-		<style>
-			input {
-    			border: 1.5px solid #030337;
-    			border-radius: 4px;
-    			padding: 7px 60px;
-			}
-			input[type=submit] {
-				background-color: #030337;
-				color: white;
-    			border-radius: 4px;
-    			padding: 7px 45px;
-    			margin: 0px 60px
-			}
-		</style>
 		
 		<link rel="stylesheet" type="text/css" href="styles.css"></link>
-		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
-	<body class="login">
-		<header>
-			<img src="images/bookmyflight.svg" alt="logo" class = "logo" height="40%">
-			<nav class="navbar navbar-custom">
-				<div class="container-fluid">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li> 
-						<li><a href="login_page.php">Book</a></li>
-						<li><a href="pnrall.php">Check PNR</a></li>
-						<li><a href="login_page.php">Login</a></li>
-						<li><a href="new_user.php">Sign Up</a></li> 
-						<li><a href="index.html#contact">Contact Us</a></li>
-						<li><a href="about.html">About Us</a></li> 
-					</ul>     
-				</div>              
+	<body class="login allpagebg">
+		<header class="otherpageNav">
+			<a href="index.html">
+				<img src="images/bookmyflight.svg" alt="logo" class="logo" height="40%">
+			</a>
+			<nav class="navbar">
+				<ul>
+					<li><a href="login_page.php">Book</a></li>
+					<li><a href="pnrall.php">Check PNR</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="index.html">Contact Us</a></li>
+					<li><a href="login_page.php">Login</a></li>
+					<li><a href="new_user.php">Sign Up</a></li>
+				</ul>
 			</nav>
 		</header>
-		<br>
-		<br>
-		<br>
-		<form class="float_form" style="padding-left: 40%" action="login_handler.php" method="POST">
-			<fieldset>
-				<legend class="login-title">Login Details</legend><br>
-				<strong>Username:</strong><br>
-				<input type="text" name="username" placeholder="Enter your username" required><br><br>
-				<strong>Password:</strong><br>
-				<input type="password" name="password" placeholder="Enter your password" required><br><br>
-				<strong>User Type:</strong><br>
-				Customer <input type='radio' name='user_type' value='Customer' checked/> Administrator <input type='radio' name='user_type' value='Administrator'/>
+		<br><br><br>
+		<div class="formContainer">
+			<form class="float_form" action="login_handler.php" method="POST">
+				<h1 class="login-title">Login</h1><br>
+				<label>Username:</label><br>
+				<input class="input" type="text" name="username" placeholder="Enter your username" required><br><br>
+				<label>Password:</label><br>
+				<input class="input" type="password" name="password" placeholder="Enter your password" required><br><br>
+				<label>User Type:</label><br>
+				<div class="radio_input">
+					<input type='radio' name='user_type' value='Customer' checked/> Customer 
+					<input type='radio' name='user_type' value='Administrator'/> Administrator 
+				</div>				
 				<br><br>
 				<?php
 					if(isset($_GET['msg']) && $_GET['msg']=='failed')
@@ -63,9 +51,9 @@
 					}
 				?>
 				<input type="submit" name="Login" value="Login" >
-			</fieldset>
-			<br>
-			<a href="new_user.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Create New User Account?</a>
-		</form>
+				<br><br>
+				<a href="new_user.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Create New User Account?</a>
+			</form>
+		</div>
 	</body>
 </html>
