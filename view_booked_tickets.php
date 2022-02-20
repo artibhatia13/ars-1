@@ -21,8 +21,8 @@
 			}
 			table {
 			 border-collapse: collapse; 
-			 margin-left: 10%;
-			 margin-right: 10%;
+			 margin-left: 13%;
+			 margin-right: 13%;
 			}
 			tr/*:nth-child(3)*/ {
 			 border: solid thin;
@@ -32,25 +32,27 @@
 			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="styles.css"></link>
-		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap" rel="stylesheet">
 	</head>
-	<body class="view_ticket">
-	<header>
-			<img src="images/bookmyflight.svg" alt="logo" class = "logo" height="40%">
-			<nav class="navbar navbar-custom">
-				<div class="container-fluid">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li> 
-						<li><a href="customer_homepage.php">Dashboard</a></li>
-						<li><a href="pnr.php">Print Ticket</a></li>
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="index.html#contact">Contact Us</a></li> 
-						<li><a href="index.html">Logouts</a></li>
-					</ul>     
-				</div>              
+	<body class="view_ticket cloudbg">
+		<header>
+			<a href="index.html">
+				<img src="images/bookmyflight.svg" alt="logo" class="logo" height="40%">
+			</a>
+			<nav class="navbar">
+				<ul>
+					<li><a href="customer_homepage.php">Book</a></li>
+					<li><a href="pnrall.php">Check PNR</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="index.html">Contact Us</a></li>
+					<li><a href="login_page.php">Login</a></li>
+					<li><a href="new_user.php">Sign Up</a></li>
+				</ul>
 			</nav>
 		</header>
-		<h2 style="padding-top: 15%;margin-left:35%;">VIEW BOOKED FLIGHT TICKETS</h2>
+		<h2 style="text-align:center;margin-top:5%;">VIEW BOOKED FLIGHT TICKETS</h2>
 		<h3 class='set_nice_size'><center><u>Upcoming Trips</u></center></h3>
 		<?php
 			$todays_date=date('Y-m-d');

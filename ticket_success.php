@@ -20,25 +20,36 @@
     			margin: 0px 127px
 			}
 		</style>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
+		<link rel="stylesheet" type="text/css" href="styles.css"></link>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<img class="logo" src="images/shutterstock_22.jpg"/> 
-		<h1 id="title">
-			AADITH AIRLINES
-		</h1>
-		<div>
-			<ul>
-				<li><a href="customer_homepage.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-				<li><a href="customer_homepage.php"><i class="fa fa-desktop" aria-hidden="true"></i> Dashboard</a></li>
-				<li><a href="index.html"><i class="fa fa-plane" aria-hidden="true"></i> About Us</a></li>
-				<li><a href="index.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
-				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-			</ul>
+	<body class="book_success cloudbg">
+		<header>
+			<a href="index.html">
+				<img src="images/bookmyflight.svg" alt="logo" class="logo" height="40%">
+			</a>
+			<nav class="navbar">
+				<ul>
+					<li><a href="customer_homepage.php">Book</a></li>
+					<li><a href="pnrall.php">Check PNR</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="index.html">Contact Us</a></li>
+					<li><a href="login_page.php">Login</a></li>
+					<li><a href="new_user.php">Sign Up</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div style="display:flex;justify-content:center;">
+			<div class="message">
+				<h2>BOOKING SUCCESSFUL!</h2>
+				<img src="images/circle_tick.png" alt="tick" style="height:7em;"><br><br>
+				<h3>Your payment of &#x20b9; <?php echo $_SESSION['total_amount']; ?> has been received.<br><br> Your PNR is <strong><?php echo $_SESSION['pnr'];?></strong>. Your tickets have been booked successfully.</h3>
+			</div>
 		</div>
-		<h2>BOOKING SUCCESSFUL</h2>
-		<h3>Your payment of &#x20b9; <?php echo $_SESSION['total_amount']; ?> has been received.<br><br> Your PNR is <strong><?php echo $_SESSION['pnr'];?></strong>. Your tickets have been booked successfully.</h3>
+		
 		<!--Following data fields were empty!
 			...
 			ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN

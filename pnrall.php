@@ -97,7 +97,7 @@ if($res0)
             </a>
             <nav class="navbar">
                 <ul>
-                    <li><a href="login_page.php">Book</a></li>
+                    <li><a href="customer_homepage.php">Book</a></li>
                     <li><a href="pnrall.php">Check PNR</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="index.html">Contact Us</a></li>

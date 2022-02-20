@@ -76,64 +76,44 @@ if($res0)
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/login.css"></link>
-        <link rel="stylesheet" type="text/css" href="styles.css"></link>
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
          <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
        <script src="bootstrap/jquery.min.js"></script>
         <script src="bootstrap/bootstrap.min.js"></script>
 
-       
+       <link rel="stylesheet" type="text/css" href="styles.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+
         <title></title>
         
         
         
     </head>
-    <body class="pnr-print"> 
-    <header>
-			<img src="images/bookmyflight.svg" alt="logo" class = "logo" height="40%">
-			<nav class="navbar navbar-custom">
-				<div class="container-fluid">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li> 
-						<li><a href="customer_homepage.php">Dashboard</a></li>
-						<li><a href="pnr.php">Print Ticket</a></li>
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="index.html#contact">Contact Us</a></li> 
-						<li><a href="index.html">Logouts</a></li>
-					</ul>     
-				</div>              
-			</nav>
-		</header>
-        <form id="index" action="pnr.php" method="post" style="padding-top: 5%;">
-            
-            <div class="container-fluid">    
-                <div class="row">
-                  <div class="col-sm-12">
-                        
-                  </div>
-                 </div>    
-             
-        
-            
-            
-                <div  id="divtop">
-                    <center>
-                        <br> <br><br>
-                            <div id="dmain"  > 
-                               <center><img src="images/bookmyflight.svg" width="300px" height="300px" ></center>
-                                <br>
-                                    <input type="text" id="u_id" name="pnr" class="form-control" style="width:300px; margin-left: 60px; margin-top: -7%; height: 5vh;" placeholder="Enter Your PNR Number"><br>
-                                   
-                                    <input type="submit" id="u_sub" name="u_sub" value="Print" class="toggle btn btn-primary" style="width:100px; margin-left: 70px;">
-                                    <button type="button" onclick="location.href = './customer_homepage.php';" class="toggle btn btn-primary" style="width:100px; margin-left: 70px;">Back to Portal</button>
-                                    <br>
-                                   
-                             </div>
-                     </div>
-                    </div>
-               </div>
-            </div>  
-            </div>
-        </form>  
-       </body>
+    <body class="pnr-print pnr cloudbg"> 
+        <header>
+            <a href="index.html">
+                <img src="images/bookmyflight.svg" alt="logo" class="logo" height="40%">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="customer_homepage.php">Book</a></li>
+                    <li><a href="pnrall.php">Check PNR</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                    <li><a href="login_page.php">Login</a></li>
+                    <li><a href="new_user.php">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+		<div class="formContainer">
+            <form id="index" action="pnr.php" method="post">
+                <h1>Check PNR</h1>
+                <input type="text" class="input" id="u_id" name="pnr" class="form-control"  placeholder="Enter Your PNR Number" style="padding:1em; background-color:#E8F0FE;"><br>
+                <input type="submit" id="u_sub" name="u_sub" value="Print" class="toggle btn btn-primary"  style="margin-top:1em"><br><br>
+                <a href="customer_homepage.php" style="text-decoration:none;color:#424242;font-size:12px;">< Back to Portal</a>
+            </form> 
+        </div> 
+    </body>
 </html>

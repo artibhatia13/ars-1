@@ -14,7 +14,11 @@
        <script src="bootstrap/jquery.min.js"></script>
         <script src="bootstrap/bootstrap.min.js"></script>
         <link type="text/css" rel="stylesheet" href="css/admform.css"></link>
-        
+        <link rel="stylesheet" type="text/css" href="styles.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+
         <script type="text/javascript">
             function printpage()
             {
@@ -54,7 +58,6 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
                     while($row = mysqli_fetch_array($result))
                       {
 ?>
-
 <hr style="border: 1px solid black;border-style: dashed;">
 <center><h3>Airpot Authority of India</h3></center>
 <center><h2>Boarding Pass - Flight Reservation Slip</h2></center><h4><?php echo $booking_status;?></h4>
@@ -86,10 +89,10 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
 
                  
                 
-        </div>
-<center><img src='images/maxx.jpg' class='img-thumbnail' width='1200px' style='height:80px;'></center>
+        </div >
+<!-- <center><img src='images/maxx.jpg' class='img-thumbnail' width='1200px' style='height:80px;'></center> -->
          
-  <div class="container-fluid">
+  <div class="container-fluid" >
                             <div class="row">
                                <div class="col-sm-12">
       <center>  <table class="table table-bordered" style="font-family: Verdana">
@@ -106,19 +109,7 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
 		
                    </font></center>
                 </td>
-                    <td colspan="2" width="3%" >
-                   <?php
-                  
-                    $picfile_path ='images/';
-                    $result1 = mysqli_query($con,"SELECT * FROM passengers where pnr='".$_SESSION['user']."'");
-                   $row1 = mysqli_fetch_array($result1)  ; 
                     
-                    
-                        $picsrc=$picfile_path.$row1['s_pic'];
-                        
-                        echo "<center><img src='images/shutterstock_2.jpg' class='img-thumbnail' width='180px' style='height:180px;'></center>";
-                   ?>
-                        </td>
                  </tr>   
 
 
@@ -164,8 +155,10 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
         <?php
               }
         ?>
- <p> 
-<center> <input type="submit" id="print" class="toggle btn btn-primary" value="Print" onclick="printpage();"></center>
+ <p>
+<hr style="border: 1px solid black;border-style: dashed;">
+<br><br>
+<center> <input type="submit" id="print" class="toggle btn btn-primary" value="Print" onclick="printpage();"></center><br>
 <CENTER><a class="print_hide" href="pnr.php">Check other PNR</a></center>
 </p>
    <style>

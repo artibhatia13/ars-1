@@ -301,29 +301,7 @@ footer .row2 .footercontact {
   background-color: transparent;
   padding: 1em;
 }
-.view_ticket {
-  overflow: hidden;
-  background-image: url(images/userbg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-right: 0%;
-  color: white;
-  font-family: cursive;
-}
 
-.pnr-print {
-  overflow: hidden;
-  background-image: url(images/userbg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-right: 0%;
-  color: white;
-  font-family: cursive;
-}
-
-.view-flight {
-  
-}
 .successContainer {
   display: flex;
   justify-content: center;
@@ -369,4 +347,25 @@ footer .row2 .footercontact {
 ::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 20px;
+}
+
+.book_success .message {
+  margin-top: 4%;
+  background-color: #f1f6fd;
+  color: #424242;
+  padding: 2em 3em;
+  border-radius: 8px;
+  text-align: center;
+}
+.book_success .message h2,h3{
+   font-weight: 300;
+}
+
+.cancelform {
+   margin-top: 7%;
+  padding: 2em 4em 3em 4em;
+  width: fit-content;
+  color: #424242;
+  background-color: #f1f6fd;
+  border-radius: 6px;
 }
