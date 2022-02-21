@@ -46,7 +46,7 @@ $result = mysqli_query($con,"SELECT * FROM passengers WHERE pnr='".$_SESSION['us
         <nav class="navbar">
             <ul>
                 <li><a href="customer_homepage.php">Book</a></li>
-                <li><a href="pnrall.php">Check PNR</a></li>
+                <li><a href="admin_homepage.php">Admin</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="index.html">Contact Us</a></li>
                 <li><a href="login_page.php">Login</a></li>

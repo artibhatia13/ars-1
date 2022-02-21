@@ -357,15 +357,25 @@ footer .row2 .footercontact {
   border-radius: 8px;
   text-align: center;
 }
-.book_success .message h2,h3{
-   font-weight: 300;
+.book_success .message h2,
+h3 {
+  font-weight: 300;
 }
 
 .cancelform {
-   margin-top: 7%;
+  margin-top: 7%;
   padding: 2em 4em 3em 4em;
   width: fit-content;
   color: #424242;
   background-color: #f1f6fd;
   border-radius: 6px;
+}
+
+#whitebg {
+  margin-top: 4%;
+  background-color: #f1f6fd;
+  color: #424242;
+  padding: 2em 3em;
+  border-radius: 8px;
+  text-align: center;
 }
